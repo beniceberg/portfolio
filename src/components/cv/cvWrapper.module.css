@@ -1,0 +1,121 @@
+.wrapper {
+  width: 100%;
+  max-width: 768px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2.44736835rem;
+}
+
+.intro {
+  display: flex;
+  align-items: center;
+  flex-direction: column-reverse;
+}
+
+.intro div {
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .intro {
+    flex-direction: row;
+  }
+  .intro div {
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .introLeft {
+    margin: 0 0 1rem 0;
+    line-height: 1;
+  }
+}
+
+.introTitle {
+  margin: 0.5rem 0 0.5rem 0;
+  line-height: 1;
+}
+
+.introLeft {
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (min-width: 768px) {
+  .introLeft {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.introHighlights {
+  margin-bottom: 0;
+  border-collapse: collapse;
+  font-weight: 700;
+  font-size: smaller;
+  line-height: 1.75;
+}
+
+.introHighlights td:first-child {
+  font-weight: 400;
+  vertical-align: top;
+}
+
+.introHighlights td:last-child {
+  padding-left: 1rem;
+}
+
+.introImageWrapper {
+  margin-bottom: 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .introImageWrapper {
+    padding: 0rem 1rem;
+    margin-bottom: 0;
+  }
+}
+
+.introImageWrapper div {
+  width: 100%;
+}
+
+.introImageWrapper img {
+  width: 100%;
+}
+
+.introContactButton {
+  outline: none;
+  border: none;
+  color: white;
+  font-size: smaller;
+  font-weight: 700;
+  margin-top: 0.75rem;
+  /* margin-right: 1rem; */
+  height: 3rem;;
+  padding: 0.5rem 1rem;
+  display: inline-block;
+  border-radius: 2px;
+}
+
+.introContactButton.red {
+  background-color: #ea2027;
+  border: solid 2px #ea2027;
+}
+
+.introContactButton.green {
+  background-color: #1aa260;
+  border: solid 2px #1aa260;
+}
+
+@media only screen and (min-width: 768px) {
+  .introContactButton {
+    align-self: center;
+    margin-right: 0;
+  }
+}
+
+.experienceTitle {
+  margin-top: 3rem;
+}

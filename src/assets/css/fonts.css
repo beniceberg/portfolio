@@ -1,0 +1,213 @@
+@font-face {
+  font-family: "Manrope";
+  font-weight: 700;
+  src: url("../fonts/manrope/Manrope-Bold.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Manrope";
+  font-weight: 500;
+  src: url("../fonts/manrope/Manrope-Medium.woff2") format("woff2");
+  font-display: swap;
+}
+
+html {
+  font-family: Manrope, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 27px;
+}
+
+h1,
+.h1 {
+  font-size: 1.7222222rem;
+  line-height: 2.3rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+h2,
+.h2 {
+  font-size: 1.4444444rem;
+  line-height: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+h3,
+.h3 {
+  font-size: 1.2222222rem;
+  line-height: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+h4,
+.h4 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+h5,
+.h5 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+p,
+ul,
+table,
+blockquote {
+  margin-top: 0rem;
+  margin-bottom: 1.5rem;
+}
+
+ul {
+  padding-left: 0;
+  margin-left: 1rem;
+}
+
+ul ul {
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+}
+
+hr,
+.hr {
+  border: 1px solid;
+  margin: -1px 0;
+}
+
+a,
+b,
+i,
+strong,
+em,
+small {
+  line-height: 0;
+}
+sub,
+sup {
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+
+a {
+  color: black;
+}
+
+@media only screen and (min-width: 768px) {
+  html {
+    font-size: 125%;
+    font-size: 19px;
+    line-height: 31px;
+  }
+
+  body {
+    font-size: 1rem;
+    line-height: 1.6315789rem;
+  }
+
+  h1,
+  .h1 {
+    font-size: 2.3684211rem;
+    line-height: 3rem;
+    margin-top: 1.6315789rem;
+    margin-bottom: 1.6315789rem;
+  }
+
+  h2,
+  .h2 {
+    font-size: 1.7894737rem;
+    line-height: 3.2631579rem;
+    margin-top: 2.04736835rem;
+    margin-bottom: 0.81578945rem;
+  }
+
+  h3,
+  .h3 {
+    font-size: 1.3157895rem;
+    line-height: 1.6315789rem;
+    margin-top: 2.04736835rem;
+    margin-bottom: 1.6315789rem;
+  }
+
+  h4,
+  .h4 {
+    font-size: 1rem;
+    line-height: 1.6315789rem;
+    margin-top: 1.6315789rem;
+    margin-bottom: 0rem;
+  }
+
+  h5,
+  .h5 {
+    font-size: 1rem;
+    line-height: 1.6315789rem;
+    margin-top: 1.6315789rem;
+    margin-bottom: 0rem;
+  }
+
+  p,
+  ul,
+  table,
+  blockquote {
+    margin-top: 0rem;
+    margin-bottom: 1.6315789rem;
+  }
+
+  ul ul,
+  ol ol,
+  ul ol,
+  ol ul {
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+  }
+
+  hr,
+  .hr {
+    border: 1px solid;
+    margin: -1px 0;
+  }
+
+  a,
+  b,
+  i,
+  strong,
+  em,
+  small {
+    line-height: 0;
+  }
+
+  sub,
+  sup {
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+
+  sup {
+    top: -0.5em;
+  }
+
+  sub {
+    bottom: -0.25em;
+  }
+}
+
+button {
+  font-family: Manrope, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+}

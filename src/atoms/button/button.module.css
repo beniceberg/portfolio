@@ -1,0 +1,33 @@
+.button {
+  background-color: white;
+  color: black;
+  outline: none;
+  border: none;
+  /* border: solid 2px black; */
+  border-radius: 2px;
+  padding: 0.4rem 0.5rem;
+  font-size: larger;
+  font-weight: bold;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  line-height: 1;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.button.white {
+  background-color: black;
+  color: white;
+}
+
+.button:hover {
+  transform: translateY(-5px);
+  border: solid 2px black;
+}
+.button.white:hover {
+  border: solid 2px white;
+}
+
+.button:focus {
+  outline: -webkit-focus-ring-color auto 5px;
+}
