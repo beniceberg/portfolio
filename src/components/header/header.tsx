@@ -49,7 +49,7 @@ const Header: FunctionComponent = () => {
 
         <Button title="Menu" onClick={toggleMenu}/>
       </div>
-      {menuOpen && <Menu handleEsc={handleEsc}/>}
+      <Menu handleEsc={handleEsc} open={menuOpen}/>
     </header>
   )
 }
