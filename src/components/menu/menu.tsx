@@ -7,9 +7,10 @@ import styles from "./menu.module.css"
 
 type MenuPropTypes = {
   handleEsc: Function
+  open: Boolean
 }
 
-const Menu: FunctionComponent<MenuPropTypes> = ({ handleEsc }) => {
+const Menu: FunctionComponent<MenuPropTypes> = ({ handleEsc, open }) => {
   const menu = [
     { to: "/", title: "Home", slug: "home" },
     { to: "/blog", title: "Blog", slug: "blog" },
@@ -27,9 +28,9 @@ const Menu: FunctionComponent<MenuPropTypes> = ({ handleEsc }) => {
   const handleClick = () => handleEsc()
 
   return (
-    <div className={styles.wrapper}>
+    <div className={`${styles.wrapper} ${open ? ``: styles.hidden}`}>
       <div className={styles.buttonWrapper}>
-        <Button title="Close" color="white" onClick={handleClick}/>
+        <Button title="Close" color="white" onClick={handleClick} transparant />
       </div>
       {menu.map(({to, slug, title}) => (
         <Link to={to} key={slug} onClick={handleClick}>{title}</Link>
