@@ -4,7 +4,6 @@
   outline: none;
   border: none;
   /* border: solid 2px black; */
-  border-radius: 2px;
   padding: 0.4rem 0.5rem;
   font-size: larger;
   font-weight: bold;
@@ -14,14 +13,16 @@
   line-height: 1;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  border: solid 2px transparent;
 }
 .button.white {
+  border: solid 2px white;
   background-color: black;
   color: white;
 }
 
 .button:hover {
-  transform: translateY(-5px);
+  /* transform: translateY(-5px); */
   border: solid 2px black;
 }
 .button.white:hover {
