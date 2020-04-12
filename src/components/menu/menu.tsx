@@ -32,7 +32,7 @@ const Menu: FunctionComponent<MenuPropTypes> = ({ handleEsc }) => {
         <Button title="Close" color="white" onClick={handleClick}/>
       </div>
       {menu.map(({to, slug, title}) => (
-        <Link to={to} key={slug}>{title}</Link>
+        <Link to={to} key={slug} onClick={handleClick}>{title}</Link>
       ))}
     </div>
   )

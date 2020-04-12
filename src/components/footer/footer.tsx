@@ -1,4 +1,4 @@
-import React from "react"
+import React, { FunctionComponent } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
 import { TSiteMetaData } from "../../atoms/seo/seoTypes"
@@ -15,7 +15,7 @@ type TStaticQuerySite = {
   }
 }
 
-const Footer = () => {
+const Footer: FunctionComponent = () => {
   const { site: { siteMetadata } }: TStaticQuerySite = useStaticQuery(graphql`
   query {
     site {
@@ -33,7 +33,9 @@ const Footer = () => {
     <p>
       <strong>{siteMetadata.author}</strong>
       <br />
-      <span>{siteMetadata.email.replace('@', `{at}`)}</span>
+      <a href={`mailto:${siteMetadata.email}?subject=Hi Ben`}>
+        <span>{siteMetadata.email.replace('@', `{at}`)}</span>
+      </a>
       <br />
       <a
         href={`https://wa.me/${normalizeTelNo(siteMetadata.telNo)}`}
