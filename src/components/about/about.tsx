@@ -2,7 +2,7 @@ import React, { FunctionComponent } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
 import { TSiteMetaData } from "../../atoms/seo/seoTypes"
-import style from "./about.module.css"
+import styles from "./about.module.css"
 
 type TStaticQuerySite = {
   site: {
@@ -22,9 +22,9 @@ const About: FunctionComponent = () => {
   }
 `)
   return (
-    <section className={style.about}>
-    <h1 className={style.title}>About me</h1>
-    <p className={style.intro}>
+    <section className={styles.about}>
+    <h1 className={styles.title}>About me</h1>
+    <p className={styles.intro}>
       <span>{`Hi my name is ${siteMetadata.author}`}<b>(No sh*t)</b>.</span>
       <span>I'm a software developer settled in <b>Amsterdam</b>.</span>
       <span>I build <b>fun</b>, <b>flexible</b> and <b>scalable</b> applications.</span>

@@ -19,17 +19,20 @@ const Menu: FunctionComponent<MenuPropTypes> = ({ handleEsc, open }) => {
   
   const removeEvent = () => {
     window.removeEventListener("keyup", handleKeyUp)
+    window.removeEventListener("click", handleClick)
     handleEsc()
   }
 
   const handleKeyUp = (e: KeyboardEvent) => e.key === 'Escape' && removeEvent()
+  const handleClick = (e: MouseEvent) => e.target && e.target.id !== 'menu' && removeEvent()
   
   useEffect(() => {
     open && window.addEventListener("keyup", handleKeyUp)
+    open && window.addEventListener("click", handleClick)
   }, [open])
 
   return (
-    <div className={`${styles.wrapper} ${open ? ``: styles.hidden}`}>
+    <div className={`${styles.wrapper} ${open ? ``: styles.hidden}`} id="menu">
       <div className={styles.buttonWrapper}>
         <Button title="Close" color="white" onClick={removeEvent} transparant />
       </div>

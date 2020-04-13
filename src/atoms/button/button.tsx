@@ -1,7 +1,7 @@
 import React, { FunctionComponent, MouseEventHandler } from "react"
+import classnames from "classnames"
 
 import styles from "./button.module.css"
-import style from "react-syntax-highlighter/dist/esm/styles/hljs/agate"
 
 type ButtonPropType = {
   title: string
@@ -12,7 +12,7 @@ type ButtonPropType = {
 
 const Button: FunctionComponent<ButtonPropType> = ({ title, color = 'black', onClick, transparant = false }) => (
   <button
-    className={`${styles.button} ${styles[color]} ${transparant ? style.transparant : ``}`}
+    className={classnames(styles.button, styles[color], { [styles.transparant]: transparant } )}
     tabIndex={0}
     onClick={onClick}
   >
