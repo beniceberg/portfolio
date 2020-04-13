@@ -16,24 +16,25 @@ const Menu: FunctionComponent<MenuPropTypes> = ({ handleEsc, open }) => {
     { to: "/blog", title: "Blog", slug: "blog" },
     { to: "/cv", title: "C V", slug: "cv" },
   ]
+  
+  const removeEvent = () => {
+    window.removeEventListener("keyup", handleKeyUp)
+    handleEsc()
+  }
 
+  const handleKeyUp = (e: KeyboardEvent) => e.key === 'Escape' && removeEvent()
+  
   useEffect(() => {
-    window.addEventListener("keyup", handleKeyUp)
-    return () => {
-      window.removeEventListener("keyup", handleKeyUp)
-    }
-  }, [])
-
-  const handleKeyUp = (e: KeyboardEvent) => e.key === 'Escape' && handleEsc()
-  const handleClick = () => handleEsc()
+    open && window.addEventListener("keyup", handleKeyUp)
+  }, [open])
 
   return (
     <div className={`${styles.wrapper} ${open ? ``: styles.hidden}`}>
       <div className={styles.buttonWrapper}>
-        <Button title="Close" color="white" onClick={handleClick} transparant />
+        <Button title="Close" color="white" onClick={removeEvent} transparant />
       </div>
       {menu.map(({to, slug, title}) => (
-        <Link to={to} key={slug} onClick={handleClick}>{title}</Link>
+        <Link to={to} key={slug} onClick={removeEvent}>{title}</Link>
       ))}
     </div>
   )

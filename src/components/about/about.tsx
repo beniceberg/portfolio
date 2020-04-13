@@ -27,9 +27,11 @@ const About: FunctionComponent = () => {
     <p className={style.intro}>
       <span>{`Hi my name is ${siteMetadata.author}`}<b>(No sh*t)</b>.</span>
       <span>I'm a software developer settled in <b>Amsterdam</b>.</span>
-      <span>I build fun, flexible and scalable applications.</span>
-      <span>Want to find out more, or have a chat?</span>
-      <span>{`Contact me at `}
+      <span>I build <b>fun</b>, <b>flexible</b> and <b>scalable</b> applications.</span>
+      <span>Want to <b>find out more</b>, or have a chat?</span>
+      <span>
+        <b>Contact me</b>
+        {` at `}
         <a href={`mailto:${siteMetadata.email}?subject=Hi Ben`}>
             {siteMetadata.email.replace('@', `{at}`)}
         </a>
