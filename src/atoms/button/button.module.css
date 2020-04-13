@@ -16,7 +16,6 @@
   border: solid 2px transparent;
 }
 .button.white {
-  border: solid 2px white;
   background-color: rgba(0,0,0,0.9);
   color: white;
 }
@@ -25,7 +24,7 @@
 }
 
 .button:hover {
-  /* transform: translateY(-5px); */
+  transform: translateY(-5px);
   border: solid 2px black;
 }
 .button.white:hover {
