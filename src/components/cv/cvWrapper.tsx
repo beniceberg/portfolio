@@ -4,25 +4,34 @@ import Project from "../project/project"
 import { ProjectType } from "../project/projectTypes"
 import ben from "@assets/images/profile.jpg"
 import styles from "./cvWrapper.module.css"
+import Button from "../../atoms/button/button"
+import { previewPDF, savePDF } from "../../helpers/cvPDF"
 
-type CvWrapperPropsType = {
-  projects: {
-    edges: ProjectType[]
-  },
-  author: {
-    id: string
-    name: string
-    telephone: string
-    rate: string
-    location: string
-    hobbies: string
-    email: string
-    dateOfBirth: string
-    available: boolean
-  }
+export type Projects = {
+  edges: ProjectType[]
 }
 
+export type AuthorType = {
+  id: string
+  name: string
+  telephone: string
+  rate: string
+  location: string
+  hobbies: string
+  email: string
+  dateOfBirth: string
+  available: boolean
+}
+
+type CvWrapperPropsType = {
+  projects: Projects,
+  author: AuthorType
+}
+
+
 const CvWrapper: FunctionComponent<CvWrapperPropsType> = ({ projects, author }) => {
+  
+  const handleClick = () => savePDF(author, projects)
 
   return (
     <div className={styles.wrapper}>
@@ -65,10 +74,12 @@ const CvWrapper: FunctionComponent<CvWrapperPropsType> = ({ projects, author }) 
           <img className={styles.thumbnail} src={ben} alt="Ben Eisenberg" />
         </div>
       </div>
+      <iframe src={previewPDF(author, projects)} height="500" width="400"></iframe>
       <h2 className={styles.experienceTitle}>Work experience</h2>
       {projects && projects.edges.map(({ node }) => (
         <Project node={node} key={node._id} />
       ))}
+      <Button title="Save PDF" onClick={handleClick} />
     </div>
   )
 }
