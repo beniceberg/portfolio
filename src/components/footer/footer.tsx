@@ -57,6 +57,7 @@ const Footer: FunctionComponent = () => {
         {siteMetadata.github}
       </a>
     </p>
+    <p className={styles.copyright}>© {new Date().getFullYear()} Ben Eisenberg</p>
   </footer>
 )}
 

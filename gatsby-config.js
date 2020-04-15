@@ -4,7 +4,7 @@ module.exports = {
   siteMetadata: {
     title: "Ben Eisenberg",
     titleTemplate: "%s - Ben Eisenberg",
-    description: "Software Engineer",
+    description: "Software Developer",
     url: "https://eisenberg.io",
     email: "ben@eisenberg.io",
     telNo: "+32 (0)472 62 40 93",
