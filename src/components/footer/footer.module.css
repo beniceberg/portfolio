@@ -27,10 +27,24 @@
 
 @media only screen and (min-width: 768px) {
   .footer {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
     height: 90px;
   }
   .footer:hover {
     height: 160px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .footer:hover .copyright {
+    opacity: 1;
+  }
+  .copyright {
+    transition: all 1s ease-in-out;
+    align-self: flex-end;
+    opacity: 0;
   }
 }
 
