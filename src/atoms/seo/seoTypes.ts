@@ -6,6 +6,7 @@ export type TSiteMetaData = {
   email: string
   telNo: string
   github: string
+  linkedIn: string
   image: string
   author: string
 }

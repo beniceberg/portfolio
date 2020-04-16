@@ -9,6 +9,7 @@ module.exports = {
     email: "ben@eisenberg.io",
     telNo: "+32 (0)472 62 40 93",
     github: "https://github.com/beniceberg",
+    linkedIn: "https://www.linkedin.com/in/ben-eisenberg-78b22673/",
     image: "src/assets/images/profile.jpg",
     author: "Ben Eisenberg",
   },
