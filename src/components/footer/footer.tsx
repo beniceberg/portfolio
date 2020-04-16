@@ -3,11 +3,11 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import { TSiteMetaData } from "../../atoms/seo/seoTypes"
 
-import { normalizeTelNo } from "../../helpers/helpers"
-
 import styles from "./footer.module.css"
-import github from "@assets/images/github.svg"
-import whatsapp from "@assets/images/whatsapp.svg"
+import WhatsApp from "@atoms/whatsapp/whatsapp"
+import Github from "@atoms/github/github"
+import Email from "@atoms/email/email"
+import LinkedIn from "@atoms/linkedIn/linkedIn"
 
 type TStaticQuerySite = {
   site: {
@@ -21,9 +21,6 @@ const Footer: FunctionComponent = () => {
     site {
       siteMetadata {
         author
-        telNo
-        email
-        github
       }
     }
   }
@@ -33,29 +30,13 @@ const Footer: FunctionComponent = () => {
     <p>
       <strong>{siteMetadata.author}</strong>
       <br />
-      <a href={`mailto:${siteMetadata.email}?subject=Hi Ben`}>
-        <span>{siteMetadata.email.replace('@', `{at}`)}</span>
-      </a>
+      <Email at />
       <br />
-      <a
-        href={`https://wa.me/${normalizeTelNo(siteMetadata.telNo)}`}
-        title="Chat with me on WhatsApp"
-        target="_blank"
-        rel="noopener"
-      >
-        <img src={whatsapp} alt="WhatsApp icon" />
-        {siteMetadata.telNo}
-      </a>
+      <WhatsApp />
       <br />
-      <a
-        href={siteMetadata.github}
-        title="My GitHub Profile"
-        target="_blank"
-        rel="noopener"
-      >
-        <img src={github} alt="GitHub icon" />
-        {siteMetadata.github}
-      </a>
+      <Github />
+      <br />
+      <LinkedIn />
     </p>
     <p className={styles.copyright}>© {new Date().getFullYear()} Ben Eisenberg</p>
   </footer>

@@ -6,8 +6,39 @@
   margin-bottom: 50px;
 }
 
-.intro span {
+.intro > span {
   display: block;
   margin-bottom: 18px;
   font-size: 26px;
+}
+
+.telNo,
+.email,
+.github,
+.linkedIn {
+  opacity: 0;
+  animation: new-mediaTrigger .8s linear forwards;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.telNo:active,
+.email:active,
+.github:active,
+.linkedIn:active {
+  animation: none;
+}
+
+@keyframes new-mediaTrigger {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 0.8;
+    transform : translateY(0);
+  }
 }
