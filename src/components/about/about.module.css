@@ -16,12 +16,14 @@
 .email,
 .github,
 .linkedIn {
+  display: inline-block;
   opacity: 0;
-  animation: new-mediaTrigger .8s linear forwards;
-}
-
-.clickable {
+  animation: media-animation .8s linear forwards;
+  -webkit-animation: media-animation .8s linear forwards;
   cursor: pointer;
+  transition: ease .8s all;
+  color: #546e7a;
+  width: fit-content;
 }
 
 .telNo:active,
@@ -31,14 +33,19 @@
   animation: none;
 }
 
-@keyframes new-mediaTrigger {
+@keyframes media-animation {
   from {
     opacity: 0;
-    transform: translateY(-10px);
+    transform: translateY(-14px);
   }
 
   to {
-    opacity: 0.8;
+    opacity: 1;
     transform : translateY(0);
   }
+}
+
+.smooth {
+  transition: all 2s ease;
+  width: fit-content;
 }
