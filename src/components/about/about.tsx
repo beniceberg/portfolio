@@ -15,6 +15,8 @@ type TStaticQuerySite = {
   }
 }
 
+const mediaList: string[] = ['telNo', 'email', 'github', 'linkedIn']
+
 const renderMediaTrigger = (media: string) => {
   switch (media) {
     case "telNo":
@@ -31,13 +33,13 @@ const renderMediaTrigger = (media: string) => {
 const renderMedia = (media: string) => {
   switch (media) {
     case "telNo":
-      return <WhatsApp hideIcon />
+      return <WhatsApp hideIcon className={styles[media]} />
     case "email":
-      return <Email hideIcon />
+      return <Email hideIcon className={styles[media]} />
     case "github":
-      return <Github hideIcon />
+      return <Github hideIcon className={styles[media]} />
     case "linkedIn":
-      return <LinkedIn hideIcon />
+      return <LinkedIn hideIcon className={styles[media]} />
   }
 }
 
@@ -52,7 +54,6 @@ const About: FunctionComponent = () => {
       }
     `)
 
-    const mediaList: string[] = ['telNo', 'email', 'github', 'linkedIn']
     const [media, setMedia] = useState(0)
     
     const changeMedia = () => setMedia(media === mediaList.length -1 ? 0 : media+1)
@@ -66,16 +67,15 @@ const About: FunctionComponent = () => {
       <span>I build <b>fun</b>, <b>flexible</b> and <b>scalable</b> applications.</span>
       <span>
         Want to <b>find out more</b>{`, or `}
-        <span onClick={changeMedia} className={styles[mediaList[media]]}>
+        <span onClick={changeMedia} className={`${styles[mediaList[media]]} ${styles.smooth}`}>
           {renderMediaTrigger(mediaList[media])}
         </span>
         ?
       </span>
-      {/* <span>Want to <b>find out more</b>, or <span onClick={changeMedia} className={`${styles[mediaList[media]]} ${styles.clickable}`}>{renderMediaTrigger(mediaList[media])}</span>?</span> */}
       <span>
         <b>Contact me</b>
         {` at `}
-        <span className={styles[mediaList[media]]}>{renderMedia(mediaList[media])}</span>
+        <span >{renderMedia(mediaList[media])}</span>
       </span>
     </p>
   </section>
