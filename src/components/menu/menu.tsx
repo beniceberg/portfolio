@@ -13,6 +13,7 @@ type MenuPropTypes = {
 const Menu: FunctionComponent<MenuPropTypes> = ({ handleEsc, open }) => {
   const menu = [
     { to: "/", title: "Home", slug: "home" },
+    { to: "/about", title: "About", slug: "about" },
     { to: "/blog", title: "Blog", slug: "blog" },
     { to: "/cv", title: "C V", slug: "cv" },
   ]
