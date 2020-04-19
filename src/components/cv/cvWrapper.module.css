@@ -1,9 +1,7 @@
 .wrapper {
   width: 100%;
   max-width: 768px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 2.44736835rem;
+  margin: 100px auto;
 }
 
 .intro {

@@ -43,7 +43,7 @@
 .wrapper a:hover {
   font-size: 40px;
   font-weight: 800;
-  border: solid 2px white;
+  /* border: solid 2px white; */
   padding: 1rem 1.5rem;
 }
 
@@ -54,5 +54,10 @@
   position: absolute;
   top: 0;
   right: 0;
-  padding-right: 2rem;
+  padding-right: 1.25rem;
+}
+@media only screen and (min-width: 768px) {
+  .buttonWrapper {
+    padding-right: 2rem;
+  }
 }

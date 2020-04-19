@@ -69,7 +69,6 @@ export const query = graphql`
 `
 
 const CvPage: FunctionComponent<CvPagePropsType> = ({ data }) => {
-  console.log("data in page", data)
   return (
     <Layout>
       <SEO

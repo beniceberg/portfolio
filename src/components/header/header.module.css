@@ -9,7 +9,14 @@
   padding-left: 1.25rem;
   padding-right: 1.25rem;
   background-color: rgba(255, 255, 255, 0.9);
+  z-index: 10;
   /* flex: 0 1 auto; */
+}
+@media only screen and (min-width: 768px) {
+  .wrapper {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 }
 
 .logoWrapper {
@@ -23,6 +30,13 @@
   display: none !important;
   width: 50px;
 }
+@media only screen and (min-width: 400px) {
+  .thumbnail {
+    display: block !important;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+  }
+}
 
 .siteTitle {
   font-size: larger;
@@ -35,19 +49,4 @@
   line-height: 1;
   display: block;
   margin-top: 0.25rem;
-}
-
-@media only screen and (min-width: 768px) {
-  .wrapper {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-}
-
-@media only screen and (min-width: 400px) {
-  .thumbnail {
-    display: block !important;
-    border-radius: 100px;
-    margin-right: 0.5rem;
-  }
 }
