@@ -1,0 +1,41 @@
+.button {
+  background-color: transparent;
+  color: black;
+  outline: none;
+  border: none;
+  /* border: solid 2px black; */
+  padding: 0.4rem 0.5rem;
+  font-size: larger;
+  font-weight: bold;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  z-index: 10;
+  line-height: 1;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  border: solid 2px black;
+}
+
+.button:hover {
+  transform: translateY(-3px);
+  animation: button-animation 1s ease-in forwards;
+  -webkit-animation: button-animation 1s ease-in forwards;
+  /* border: solid 2px black; */
+}
+
+@keyframes button-animation {
+  from {
+    background-color: transparent;
+    color: black;
+  }
+
+  to {
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+  }
+}
+
+.button:focus {
+  outline: -webkit-focus-ring-color auto 5px;
+}
