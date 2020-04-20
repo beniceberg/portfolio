@@ -27,7 +27,7 @@
 }
 
 .wrapper a {
-  color: white;
+  color: rgba(255, 255, 255, 1);
   line-height: 1;
   text-decoration: none;
   height: 3.25rem;
@@ -39,12 +39,16 @@
   transition: all 0.4s ease-in-out;
 }
 
-.wrapper a:focus,
-.wrapper a:hover {
+.wrapper a.passive:focus,
+.wrapper a.passive:hover {
   font-size: 40px;
   font-weight: 800;
   /* border: solid 2px white; */
   padding: 1rem 1.5rem;
+}
+
+.wrapper a.active {
+  border-bottom: 1px solid white;
 }
 
 .buttonWrapper {

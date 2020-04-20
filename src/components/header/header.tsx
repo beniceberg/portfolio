@@ -9,13 +9,15 @@ import styles from "./header.module.css"
 
 import { TSiteMetaData } from "../../atoms/seo/seoTypes"
 
+import { LocationPropType } from "../../helpers/types"
+
 type TStaticQuerySite = {
   site: {
     siteMetadata: TSiteMetaData
   }
 }
 
-const Header: FunctionComponent = () => {
+const Header: FunctionComponent<LocationPropType> = ({ location }) => {
   const data: TStaticQuerySite = useStaticQuery(graphql`
     query {
       site {
@@ -49,7 +51,7 @@ const Header: FunctionComponent = () => {
 
         <Button title="Menu" onClick={toggleMenu}/>
       </div>
-      <Menu handleEsc={handleEsc} open={menuOpen}/>
+      <Menu handleEsc={handleEsc} open={menuOpen} location={location} />
     </header>
   )
 }

@@ -1,8 +1,6 @@
 import React, { FunctionComponent, useEffect } from "react"
 
 import Landing from "@components/landing/landing"
-
-// import Layout from "@atoms/layout/layout"
 import SEO from "@atoms/seo/seo"
 
 import play from "../helpers/dust"

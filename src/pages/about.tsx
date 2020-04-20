@@ -5,9 +5,11 @@ import About from "@components/about/about"
 import Layout from "@atoms/layout/layout"
 import SEO from "@atoms/seo/seo"
 
-const IndexPage: FunctionComponent = () => {
+import { LocationPropType } from "../helpers/types"
+
+const IndexPage: FunctionComponent<LocationPropType> = ({ location }) => {
   return (
-    <Layout>
+    <Layout location={location} >
       <SEO
         title="Freelance full-stack developer"
         description="Freelance full-stack developer working with React, Vuejs and TypeScript in front-end and Expressjs in back-end."

@@ -8,9 +8,11 @@ import styles from "./layout.module.css"
 import Header from "@components/header/header"
 import Footer from "@components/footer/footer"
 
-const Layout: FunctionComponent = ({ children }) => (
+import { LocationPropType } from "../../helpers/types"
+
+const Layout: FunctionComponent<LocationPropType> = ({ children, location }) => (
   <div className={styles.layoutWrapper}>
-    <Header />
+    <Header location={location} />
     <main className={styles.main}>
       <section className={styles.content}>
         {children}
