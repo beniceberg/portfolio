@@ -7,7 +7,9 @@ import SEO from "@atoms/seo/seo"
 import CvWrapper from "@components/cv/cvWrapper"
 import { ProjectType } from "../components/project/projectTypes"
 
-type CvPagePropsType = {
+import { LocationPropType } from "../helpers/types"
+
+type CvPagePropsType = LocationPropType & {
   data: {
     projects: {
       edges: ProjectType[]
@@ -68,9 +70,9 @@ export const query = graphql`
   }
 `
 
-const CvPage: FunctionComponent<CvPagePropsType> = ({ data }) => {
+const CvPage: FunctionComponent<CvPagePropsType> = ({ location, data }) => {
   return (
-    <Layout>
+    <Layout location={location} >
       <SEO
         title="Personal details and work experience"
         description="C.V. of freelance React and TypeScript developer in Utrecht, the Netherlands"
