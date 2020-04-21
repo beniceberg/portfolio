@@ -1,11 +1,12 @@
 import { CanvasSpace, Form, Util, Vector } from "./pt.js"
 
-const play = () => {  
+const play = (col = 'a') => {  
   //// 1. Define Space and Form
   const colors = {
     a1: "#ff2d5d", a2: "#42dc8e", a3: "#2e43eb", a4: "#ffe359",
     b1: "#96bfed", b2: "#f5ead6", b3: "#f1f3f7", b4: "#e2e6ef",
-    c1: "#111", c2: "#567", c3: "#abc", c4: "rgba(255,255,255,.9)"
+    c1: "#111", c2: "#567", c3: "#abc", c4: "rgba(255,255,255,.9)",
+    d1: "#AE0000", d2: "#C70000", d3: "#E10000", d4: "#FF0000",
   };
   
   var space = new CanvasSpace("canvas").setup( {bgcolor: "#ffffff"} );
@@ -22,7 +23,7 @@ const play = () => {
     this.age = 0;
     this.maxAge = Math.random() * 500 + 50;
     this.weight =  0.25 + Math.random()*3;
-    this.color = (this.weight > 0.7) ? colors["a"+Math.ceil(Math.random()*4)] : "#000";
+    this.color = (this.weight > 0.7) ? colors[col+Math.ceil(Math.random()*4)] : "#000";
   }
   Util.extend( Dust, Vector ); // extends Vector class
   
