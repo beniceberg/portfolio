@@ -1,19 +1,21 @@
-import React, { FunctionComponent } from "react"
+import React, { FunctionComponent, useEffect } from "react"
 
-import Layout from "@atoms/layout/layout"
+import Error from "@components/error/error"
 import SEO from "@atoms/seo/seo"
 
-const NotFoundPage: FunctionComponent = () => (
-  <Layout>
+import play from "../helpers/dust"
+
+const NotFoundPage: FunctionComponent = () => {
+  useEffect(() => { play("d") }, [])
+  return (
     <>
+      <div id="canvas" />
       <SEO 
         title="404: Not found"
         description="This is an error page, you must have an unknown url"
       />
-      <h1>NOT FOUND</h1>
-      <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+      <Error />>
     </>
-  </Layout>
-)
+)}
 
 export default NotFoundPage
