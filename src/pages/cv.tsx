@@ -64,7 +64,7 @@ export const query = graphql`
       location
       hobbies
       email
-      dateOfBirth(formatString: "DD MMMM YYYY")
+      dateOfBirth(formatString: "YYYY-MM-DD")
       available
     }
   }

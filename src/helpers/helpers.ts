@@ -21,3 +21,22 @@ export const urlFor = (source: string) => {
 
 export const normalizeTelNo = (telNo: string) =>
   telNo.replace(/^(\D*)(0+)|\((.*?)\)|[+ \-]/g, "")
+
+/**
+ *
+ * @param dob Date of birth | format "YYYY-MM-DD"
+ * @returns number age
+ */
+export const calculateAge = (dob: string) => {
+  const dobDate = new Date(dob)
+  const nowDate = new Date()
+  return (
+    nowDate.getFullYear() -
+    dobDate.getFullYear() -
+    (nowDate.getMonth() < dobDate.getMonth()
+      ? 1
+      : nowDate.getDate() < dobDate.getDate()
+      ? 1
+      : 0)
+  )
+}
