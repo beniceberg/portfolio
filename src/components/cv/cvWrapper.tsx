@@ -4,6 +4,7 @@ import Project from "../project/project"
 import { ProjectType } from "../project/projectTypes"
 import ben from "@assets/images/profile.jpg"
 import styles from "./cvWrapper.module.css"
+import { calculateAge } from "../../helpers/helpers"
 
 type CvWrapperPropsType = {
   projects: {
@@ -44,8 +45,8 @@ const CvWrapper: FunctionComponent<CvWrapperPropsType> = ({ projects, author }) 
                 <td>{author.location}</td>
               </tr>
               <tr>
-                <td>Birthdate: </td>
-                <td>{author.dateOfBirth}</td>
+                <td>Age: </td>
+                <td>{calculateAge(author.dateOfBirth)}</td>
               </tr>
               <tr>
                 <td>Rate: </td>
@@ -57,9 +58,9 @@ const CvWrapper: FunctionComponent<CvWrapperPropsType> = ({ projects, author }) 
               </tr>
             </tbody>
           </table>
-          <button className={`${styles.introContactButton} ${author.available ? styles.green : styles.red}`}>
+          {/* <button className={`${styles.introContactButton} ${author.available ? styles.green : styles.red}`}>
             {author.available ? `I am available for new work` : `I'm not available for new work`}
-          </button>
+          </button> */}
         </div>
         <div className={styles.introImageWrapper}>
           <img className={styles.thumbnail} src={ben} alt="Ben Eisenberg" />
