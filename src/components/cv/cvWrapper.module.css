@@ -17,6 +17,7 @@
 @media only screen and (min-width: 768px) {
   .intro {
     flex-direction: row;
+    height: 340px;
   }
   .intro div {
     width: 50%;
@@ -25,7 +26,7 @@
 
 @media only screen and (min-width: 768px) {
   .introLeft {
-    margin: 0 0 1rem 0;
+    margin: 0;
     line-height: 1;
   }
 }
@@ -65,23 +66,30 @@
 }
 
 .introImageWrapper {
-  margin-bottom: 1rem;
+  margin: 1.5rem 0;
+  display: flex;
+  justify-content: center;
 }
 
 @media only screen and (min-width: 768px) {
   .introImageWrapper {
     padding: 0rem 1rem;
     margin-bottom: 0;
+    height: 100%;
   }
 }
 
-.introImageWrapper div {
-  width: 100%;
+.introImage {
+  width: 80%;
 }
 
-.introImageWrapper img {
-  width: 100%;
+@media only screen and (min-width: 768px) {
+  .introImage {
+    height: 100%;
+    width: auto;
+  }
 }
+
 
 .introContactButton {
   outline: none;

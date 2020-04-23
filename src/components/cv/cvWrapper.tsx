@@ -14,7 +14,6 @@ type CvWrapperPropsType = {
     id: string
     name: string
     telephone: string
-    rate: string
     location: string
     hobbies: string
     email: string
@@ -48,10 +47,10 @@ const CvWrapper: FunctionComponent<CvWrapperPropsType> = ({ projects, author }) 
                 <td>Age: </td>
                 <td>{calculateAge(author.dateOfBirth)}</td>
               </tr>
-              <tr>
+              {/* <tr>
                 <td>Rate: </td>
                 <td>{author.rate}</td>
-              </tr>
+              </tr> */}
               <tr>
                 <td>Hobbies: </td>
                 <td>{author.hobbies}</td>
@@ -63,7 +62,7 @@ const CvWrapper: FunctionComponent<CvWrapperPropsType> = ({ projects, author }) 
           </button> */}
         </div>
         <div className={styles.introImageWrapper}>
-          <img className={styles.thumbnail} src={ben} alt="Ben Eisenberg" />
+          <img className={styles.introImage} src={ben} alt="Ben Eisenberg" />
         </div>
       </div>
       <h2 className={styles.experienceTitle}>Work experience</h2>
