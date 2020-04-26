@@ -4,6 +4,7 @@ import Project from "../project/project"
 import { ProjectType } from "../project/projectTypes"
 import ben from "@assets/images/profile.jpg"
 import styles from "./cvWrapper.module.css"
+import Image from "../../atoms/image"
 import { calculateAge } from "../../helpers/helpers"
 
 type CvWrapperPropsType = {
@@ -19,6 +20,7 @@ type CvWrapperPropsType = {
     email: string
     dateOfBirth: string
     available: boolean
+    image: any
   }
 }
 
@@ -62,7 +64,8 @@ const CvWrapper: FunctionComponent<CvWrapperPropsType> = ({ projects, author }) 
           </button> */}
         </div>
         <div className={styles.introImageWrapper}>
-          <img className={styles.introImage} src={ben} alt="Ben Eisenberg" />
+          <Image fixes image={author.image.asset.fixed} />
+          {/* <img className={styles.introImage} src={ben} alt="Ben Eisenberg" /> */}
         </div>
       </div>
       <h2 className={styles.experienceTitle}>Work experience</h2>

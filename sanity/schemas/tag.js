@@ -16,6 +16,14 @@ export default {
         source: 'title',
         maxLength: 96,
       },
-    }
+    },
+    {
+      name: 'icon',
+      title: 'Icon',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    },
   ],
 }

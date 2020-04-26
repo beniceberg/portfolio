@@ -24,6 +24,7 @@ type CvPagePropsType = LocationPropType & {
       email: string
       dateOfBirth: string
       available: boolean
+      image: any
     }
   }
 }
@@ -65,6 +66,13 @@ export const query = graphql`
       email
       dateOfBirth(formatString: "YYYY-MM-DD")
       available
+      image {
+        asset {
+          fixed(width: 400) {
+            ...GatsbySanityImageFixed
+          }
+        }
+      }
     }
   }
 `
