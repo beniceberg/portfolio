@@ -80,8 +80,8 @@
 }
 
 .introImage {
-  /* width: 80%; */
-  height: auto;
+  height: 270px;
+  width: 208px;
 }
 
 @media only screen and (min-width: 768px) {
