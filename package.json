@@ -1,16 +1,16 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "ben-eisenberg-portfolio",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "A portfolio written in Gatsby and Sanity",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Ben Eisenberg <ben.iceberg@gmail.com>",
   "dependencies": {
     "@sanity/block-content-to-react": "^2.0.7",
     "@sanity/core": "^0.147.6",
     "@sanity/image-url": "^0.140.15",
-    "@types/lodash": "^4.14.149",
+    "@types/jest": "^25.2.1",
+    "@types/lodash": "^4.14.150",
     "classnames": "^2.2.6",
-    "date-fns": "^2.8.1",
     "eslint": "^6.8.0",
     "gatsby": "^2.19.18",
     "gatsby-cli": "^2.8.26",
@@ -44,6 +44,7 @@
     "@types/classnames": "^2.2.9",
     "@types/react-helmet": "^5.0.14",
     "@types/react-syntax-highlighter": "^11.0.4",
+    "@types/react-test-renderer": "^16.9.2",
     "babel-jest": "^25.4.0",
     "babel-preset-gatsby": "^0.3.4",
     "identity-obj-proxy": "^3.0.0",
@@ -66,9 +67,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/beniceberg/beneisenberg"
   }
 }
