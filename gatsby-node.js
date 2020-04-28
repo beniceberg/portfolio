@@ -4,9 +4,6 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
-// You can delete this file if you're not using it
-const { format } = require("date-fns")
-
 async function createBlogPostPages(graphql, actions, reporter) {
   const { createPage } = actions
   const result = await graphql(`
@@ -18,7 +15,7 @@ async function createBlogPostPages(graphql, actions, reporter) {
         edges {
           node {
             id
-            publishedAt
+            publishedAt(formatString: "YYYY/MM")
             slug {
               current
             }
@@ -34,8 +31,7 @@ async function createBlogPostPages(graphql, actions, reporter) {
 
   postEdges.forEach(edge => {
     const { id, slug, publishedAt } = edge.node
-    const dateSegment = format(new Date(publishedAt), "yyyy/MM")
-    const path = `blog/${dateSegment}/${slug.current}/`
+    const path = `blog/${publishedAt}/${slug.current}/`
 
     reporter.info(`Creating blog post page: ${path}`)
 

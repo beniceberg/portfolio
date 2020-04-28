@@ -1,4 +1,3 @@
-import { format } from "date-fns"
 import imageUrlBuilder from "@sanity/image-url"
 
 const builder = imageUrlBuilder({
@@ -12,7 +11,7 @@ export const mapEdgesToNodes = (data: any) => {
 }
 
 export const getBlogUrl = (publishedAt: string, slug: string) => {
-  return `${format(new Date(publishedAt), "yyyy/MM")}/${slug}/`
+  return `${publishedAt}/${slug}/`
 }
 
 export const urlFor = (source: string) => {
