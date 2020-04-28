@@ -33,7 +33,7 @@ export const query = graphql`
           language {
             key
           }
-          publishedAt
+          publishedAt(formatString: "YYYY/MM")
         }
       }
     }
