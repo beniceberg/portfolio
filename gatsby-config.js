@@ -46,7 +46,7 @@ module.exports = {
           '@components': './components',
           '@atoms': './atoms',
           '@assets': './assets',
-          helpers: './helpers', // <- will become ./src/helpers
+          '@helpers': './helpers',
           static: {
             root: './public', // <- will used as this alias' root dir
             alias: './static' // <- will become ./public/static

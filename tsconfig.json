@@ -19,7 +19,9 @@
   "baseUrl": "./src",
   "typeRoots": ["typings.d.ts"],
   "paths": {
-    "@atoms/*": ["atoms/*"],
-    "@components/*": ["components/*"]
+    "@atoms/*": ["/atoms/*"],
+    "@components/*": ["/components/*"],
+    "@assets/*": ["/assets/*"],
+    "@helpers/*": ["/helpers/*"]
   }
 }

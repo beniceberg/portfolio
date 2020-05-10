@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 import Layout from "@atoms/layout/layout"
 import SEO from "@atoms/seo/seo"
 import ExcerptWrapper from "@components/excerpt/excerptWrapper"
+import Construction from "@components/construction/construction"
 
 import { PostType } from "../components/post/postTypes"
 import { LocationPropType } from "../helpers/types"
@@ -47,7 +48,9 @@ const BlogPage: FunctionComponent<BlogPagePropTypes> = ({ data, location }) => {
         title="Blogs posts full-stack developer"
         description="Freelance full-stack developer working with React, Vuejs and TypeScript in front-end and Expressjs in back-end."
       />
-      {data.posts.edges && <ExcerptWrapper posts={data.posts.edges} />}
+      {data.posts.edges.length 
+        ? <ExcerptWrapper posts={data.posts.edges} /> 
+        : <Construction />}
     </Layout>
   )
 }
