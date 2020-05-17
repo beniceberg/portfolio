@@ -1,6 +1,7 @@
 import React, { FunctionComponent } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import PropTypes from "prop-types"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 import { TSiteMetaData } from "../seo/seoTypes"
 
@@ -30,7 +31,7 @@ const LinkedIn: FunctionComponent<LinkedInPropType> = ({ hideIcon, showText, cla
   }
 `)
   return (
-    <a
+    <OutboundLink
       href={siteMetadata.linkedIn}
       title="My LinkedIn Profile"
       target="_blank"
@@ -39,7 +40,7 @@ const LinkedIn: FunctionComponent<LinkedInPropType> = ({ hideIcon, showText, cla
     >
       {!hideIcon && <img src={linkedIn} alt="LinkedIn icon" />}
       {showText && siteMetadata.linkedIn.replace('https://www.linkedin.com/', '')}
-    </a>
+    </OutboundLink>
 )}
 
 LinkedIn.propTypes = {

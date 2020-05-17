@@ -1,6 +1,7 @@
 import React, { FunctionComponent } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import PropTypes from "prop-types"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 import { TSiteMetaData } from "../seo/seoTypes"
 
@@ -31,14 +32,14 @@ const Email: FunctionComponent<EmailPropType> = ({ hideIcon, showText, className
   }
 `)
   return (
-    <a
+    <OutboundLink
       href={`mailto:${siteMetadata.email}?subject=Hi Ben`}
       title="Mail me"
       className={className}
     >
     {!hideIcon && <img src={email} alt="Email icon" />}
     {showText && siteMetadata.email.replace('@', at ? `{at}` : '@')}
-    </a>
+    </OutboundLink>
 )}
 
 Email.propTypes = {

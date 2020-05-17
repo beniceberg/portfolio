@@ -1,6 +1,7 @@
 import React, { FunctionComponent } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import PropTypes from "prop-types"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 import { TSiteMetaData } from "../seo/seoTypes"
 import { normalizeTelNo } from "../../helpers/helpers"
@@ -31,7 +32,7 @@ const WhatsApp: FunctionComponent<WhatsAppPropType> = ({ hideIcon, showText, cla
   }
 `)
   return (
-    <a
+    <OutboundLink
       href={`https://wa.me/${normalizeTelNo(siteMetadata.telNo)}`}
       title="Chat with me on WhatsApp"
       target="_blank"
@@ -40,7 +41,7 @@ const WhatsApp: FunctionComponent<WhatsAppPropType> = ({ hideIcon, showText, cla
     >
     {!hideIcon && <img src={whatsapp} alt="WhatsApp icon" />}
     {showText && siteMetadata.telNo}
-    </a>
+    </OutboundLink>
 )}
 
 WhatsApp.propTypes = {

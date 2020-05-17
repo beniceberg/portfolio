@@ -1,6 +1,7 @@
 import React, { FunctionComponent } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import PropTypes from "prop-types"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 import { TSiteMetaData } from "../../atoms/seo/seoTypes"
 
@@ -30,7 +31,7 @@ const Github: FunctionComponent<GithubPropType> = ({ hideIcon, showText, classNa
   }
 `)
   return (
-    <a
+    <OutboundLink
       href={siteMetadata.github}
       title="My GitHub Profile"
       target="_blank"
@@ -39,7 +40,7 @@ const Github: FunctionComponent<GithubPropType> = ({ hideIcon, showText, classNa
     >
       {!hideIcon && <img src={github} alt="GitHub icon" />}
       {showText && siteMetadata.github.replace("https://", "")}
-    </a>
+    </OutboundLink>
 )}
 
 Github.propTypes = {

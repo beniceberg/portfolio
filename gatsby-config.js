@@ -64,6 +64,18 @@ module.exports = {
         overlayDraft: true,
       },
     },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: process.env.GOOGLE_ANALYTICS_TRACKING_ID,
+        // Defines where to place the tracking script - `true` in the head and `false` in the body
+        head: false,
+        // Setting this parameter is optional
+        anonymize: true,
+        // If you enable this optional option, Google Analytics will not be loaded at all for visitors that have “Do Not Track” enabled. While using Google Analytics does not necessarily constitute Tracking, you might still want to do this to cater to more privacy oriented users.
+        respectDNT: true,
+      },
+    },
     // To learn more, visit: https://gatsby.dev/offline
     `gatsby-plugin-offline`,
     // `gatsby-plugin-no-javascript`,
