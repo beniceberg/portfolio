@@ -10,8 +10,8 @@ export const mapEdgesToNodes = (data: any) => {
   return data.edges.map((edge: any) => edge.node)
 }
 
-export const getBlogUrl = (publishedAt: string, slug: string) => {
-  return `${publishedAt}/${slug}/`
+export const getBlogUrl = (slug: string) => {
+  return `blog/${slug}/`
 }
 
 export const urlFor = (source: string) => {

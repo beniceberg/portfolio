@@ -83,7 +83,7 @@ const PostSingle: FunctionComponent<TPostSingle> = ({ data }) => {
         title={title}
         description={excerpt}
         imageUrl={mainImage.asset.fluid.src}
-        postUrl={getBlogUrl(publishedAt, slug.current)}
+        postUrl={getBlogUrl(slug.current)}
         publishedAt={publishedAt}
         type={"article"}
       />
