@@ -40,7 +40,7 @@ const Menu: FunctionComponent<MenuPropTypes> = ({ handleEsc, open, location }) =
         <Button title="Close" color="white" onClick={removeEvent} transparant />
       </div>
       {menu.map(({to, slug, title}) => (
-        <Link to={to} key={slug} onClick={removeEvent} className={location.pathname === to ? styles.active : styles.passive} >{title}</Link>
+        <Link to={to} key={slug} onClick={removeEvent} className={location && location.pathname === to ? styles.active : styles.passive} >{title}</Link>
       ))}
     </div>
   )
