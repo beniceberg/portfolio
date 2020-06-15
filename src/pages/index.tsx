@@ -2,6 +2,7 @@ import React, { FunctionComponent, useEffect } from "react"
 
 import Landing from "@components/landing/landing"
 import SEO from "@atoms/seo/seo"
+import CookieConsent from "@atoms/cookieconsent/CookieConsent"
 
 import play from "../helpers/dust"
 
@@ -15,6 +16,7 @@ const IndexPage: FunctionComponent = () => {
         description="Freelance full-stack developer working with React, Vuejs and TypeScript in front-end and Expressjs in back-end."
       />
       <Landing/>
+      <CookieConsent />
     </>
   )
 }
