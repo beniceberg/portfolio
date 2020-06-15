@@ -7,6 +7,7 @@ import styles from "./layout.module.css"
 
 import Header from "@components/header/header"
 import Footer from "@components/footer/footer"
+import CookieConsent from "@atoms/cookieconsent/CookieConsent"
 
 import { LocationPropType } from "../../helpers/types"
 
@@ -19,6 +20,7 @@ const Layout: FunctionComponent<LocationPropType> = ({ children, location }) => 
       </section>
     </main>
     <Footer />
+    <CookieConsent />
   </div>
 )
 
